@@ -1,0 +1,22 @@
+#ifndef UPGRADE_H
+#define UPGRADE_H
+
+#include <QObject>
+#include <QVector>
+#include "CConnectionForSshClient.h"
+
+class upgrade : public QObject
+{
+    Q_OBJECT
+public:
+    QVector<QString> devs;
+    QVector<QString> files;
+    explicit upgrade(QObject *parent = nullptr,QString devs,QString name,QString pwd,QString dir);
+    void parseDevs(QVector<QString> &devs,QString devs1);
+
+signals:
+
+public slots:
+};
+
+#endif // UPGRADE_H
